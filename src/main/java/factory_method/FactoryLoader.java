@@ -12,6 +12,7 @@ public class FactoryLoader {
 		} catch (ClassNotFoundException e) {
 			System.out.println("El nombre de la clase no existe en el classpath");
 			e.printStackTrace();
+			throw e;
 		}
 		Object o = null;
 		try {

@@ -1,6 +1,7 @@
 package metaheuristics.generators;
 
 import java.lang.reflect.InvocationTargetException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,6 +58,7 @@ public class GeneticAlgorithm extends Generator {
 	private int[] listCountBetterGender = new int[10];
 	private int[] listCountGender = new int[10];
 	private float[] listTrace = new float[1200000];
+	private static final SecureRandom RANDOM = new SecureRandom();
 	
     public GeneticAlgorithm() {
 		super();
@@ -74,15 +76,16 @@ public class GeneticAlgorithm extends Generator {
     
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-    	
+
+
 		//******************selection*******************************
 		//ArrayList<State>list=new ArrayList<State>();
 		List<State> refList = new ArrayList<State>(this.listState); 
     	iffatherselection = new FactoryFatherSelection();
     	FatherSelection selection = iffatherselection.createSelectFather(selectionType);
     	List<State> fathers = selection.selection(refList, truncation);
-    	int pos1 = (int)(Math.random() * fathers.size());
-    	int pos2 = (int)(Math.random() * fathers.size());
+    	int pos1 = (int)(RANDOM.nextInt() * fathers.size());
+    	int pos2 = (int)(RANDOM.nextInt() * fathers.size());
     	
     	State auxState1 = (State) Strategy.getStrategy().getProblem().getState().getCopy();
     	auxState1.setCode(new ArrayList<Object>(fathers.get(pos1).getCode()));

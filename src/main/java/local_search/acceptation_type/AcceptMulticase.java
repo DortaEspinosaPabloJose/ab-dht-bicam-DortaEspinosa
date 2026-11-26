@@ -3,6 +3,7 @@ package local_search.acceptation_type;
 import metaheuristics.generators.*;
 import metaheurictics.strategy.*;
 
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 
@@ -21,7 +22,7 @@ public class AcceptMulticase extends AcceptableCandidate {
 		}
 		Double T = MultiCaseSimulatedAnnealing.tinitial;
 		double pAccept = 0;
-		Random rdm = new Random();
+		Random rdm =  new SecureRandom();
 		Dominance dominance= new Dominance();
 		//Verificando si la solución candidata domina a la solución actual
 		//Si la solución candidata domina a la solución actual

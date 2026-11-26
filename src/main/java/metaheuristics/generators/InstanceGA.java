@@ -1,11 +1,14 @@
 package metaheuristics.generators;
 
 import factory_method.FactoryGenerator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class InstanceGA implements Runnable {
 
 	private boolean terminate = false;
+	private static final Logger LOGGER = LoggerFactory.getLogger(InstanceGA.class);
 	
 	public void run() {
 		FactoryGenerator ifFactoryGenerator = new FactoryGenerator();
@@ -13,7 +16,7 @@ public class InstanceGA implements Runnable {
 		try {
 			generatorGA = ifFactoryGenerator.createGenerator(GeneratorType.GeneticAlgorithm);
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOGGER.error("No se pudo crear el generador DistributionEstimationAlgorithm", e);
 		}
 		boolean find = false;
 		int i = 0;

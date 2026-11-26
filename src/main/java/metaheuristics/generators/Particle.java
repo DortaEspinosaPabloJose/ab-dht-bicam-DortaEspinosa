@@ -1,6 +1,7 @@
 package metaheuristics.generators;
 
 import java.lang.reflect.InvocationTargetException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,13 +69,14 @@ public class Particle extends Generator {
 		this.stateActual.setCode(newCode);
 		return null;
 	}
-	
+
+	private static final SecureRandom RANDOM = new SecureRandom();
 	
 	private ArrayList<Object> UpdateVelocity(){ // actualizar velocidad
     	double w = ParticleSwarmOptimization.wmax - ((ParticleSwarmOptimization.wmax - ParticleSwarmOptimization.wmin) / Strategy.getStrategy().getCountMax()) * ParticleSwarmOptimization.countCurrentIterPSO;  //CALCULO DE LA INERCIA
-    	double rand1 = (double)(Math.random() * (double)(1));
-    	double rand2 = (double)(Math.random() * (double)(1));
-    	double inertia, cognitive, social;
+    	double rand2 = (double)(RANDOM.nextDouble());
+		double rand1 = (double)(RANDOM.nextDouble());
+		double inertia, cognitive, social;
     	int learning = ParticleSwarmOptimization.learning1 + ParticleSwarmOptimization.learning2; // ratios de aprendizaje cognitivo y social
     	ParticleSwarmOptimization.constriction = 2/(Math.abs(2 - learning-Math.sqrt((learning * learning)- 4 * learning)));   // Factor de costriccion
     	ArrayList<Object> actualVelocity = new ArrayList<Object>();
@@ -119,7 +121,7 @@ public class Particle extends Generator {
 	    }
 		 else{                                                  //cálculo de la posicion para codificacion binaria
 			  for (int i = 0; i < stateActual.getCode().size(); i++){
-				  double rand = (double)(Math.random() * (double)(1));
+				  double rand = (double)(RANDOM.nextDouble());
 				  double s = 1/(1 + 1.72 * (Double)(actualVelocity.get(i))); // 
 				  if (rand < s){
 				     binaryCode.add(1);

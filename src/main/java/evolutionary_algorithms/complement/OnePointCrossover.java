@@ -1,5 +1,6 @@
 package evolutionary_algorithms.complement;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,8 @@ import problem.definition.State;
 
 public class OnePointCrossover extends Crossover {
 
+	private static final SecureRandom RANDOM = new SecureRandom();
+
 	@Override
 	public State crossover(State father1, State father2, double PC) {
 				
@@ -18,10 +21,10 @@ public class OnePointCrossover extends Crossover {
 	    List<Object> ind1 = new ArrayList<Object>();
 	    List<Object> ind2 = new ArrayList<Object>();
 	    
-	    double number = (double) Math.random() * (double)(1);	
+	    double number = (double) RANDOM.nextDouble();
 		if(number <= PC){
 			//llenar los valores de cada hijo
-			int pos = (int) Math.random() * (int)(Strategy.getStrategy().getProblem().getCodification().getVariableCount() - 1); 
+			int pos = (int) (RANDOM.nextInt() * (int) (Strategy.getStrategy().getProblem().getCodification().getVariableCount() - 1));
 			for (int i = 0; i < father1.getCode().size(); i++) {
 				if(i <= pos){
 					ind1.add(father1.getCode().get(i));
@@ -41,7 +44,7 @@ public class OnePointCrossover extends Crossover {
 			   }				  
 		    }*/
 			//generar un numero aleatorio 0 o 1, si es 0 me quedo con ind1 si es 1 con ind2.
-			int random = (int)(Math.random() * (double)(2));
+			int random = (int)(RANDOM.nextInt() * (double)(2));
 			if(random == 0)
 				newInd.setCode((ArrayList<Object>) ind1);
 			else newInd.setCode((ArrayList<Object>) ind2); 

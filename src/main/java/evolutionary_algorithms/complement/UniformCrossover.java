@@ -4,13 +4,16 @@ import metaheurictics.strategy.Strategy;
 
 import problem.definition.State;
 
+import java.security.SecureRandom;
+
 public class UniformCrossover extends Crossover {
-	
+
+	private static final SecureRandom RANDOM = new SecureRandom();
 	
 	public int[] mascara(int length){
 		int[] mascara = new int[length];
 		for (int i = 0; i < mascara.length; i++) {
-			int value = (int)(Math.random() * (int)(2));
+			int value = (int)(RANDOM.nextInt() * (int)(2));
 			mascara[0] = value;
 		}
 		return mascara;

@@ -66,7 +66,7 @@ public class Strategy {
 		super();
 	}
 
-	public static Strategy getStrategy() {
+	public static synchronized Strategy getStrategy() {
 		if (strategy == null) {
 			strategy = new Strategy();
 		}

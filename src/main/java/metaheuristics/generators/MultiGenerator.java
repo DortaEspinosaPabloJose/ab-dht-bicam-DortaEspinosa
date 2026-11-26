@@ -1,13 +1,15 @@
 package metaheuristics.generators;
 
 import java.lang.reflect.InvocationTargetException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
 import factory_method.FactoryGenerator;
 
 import metaheurictics.strategy.Strategy;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import problem.definition.Problem.ProblemType;
 import problem.definition.State;
 
@@ -17,7 +19,9 @@ public class MultiGenerator extends Generator {
 	private static Generator[] listGenerators = new Generator[GeneratorType.values().length];
 	public static List<State> listGeneratedPP = new ArrayList<State> ();
 	public static Generator activeGenerator;
-	public static List<State> listStateReference = new ArrayList<State>(); 
+	public static List<State> listStateReference = new ArrayList<State>();
+	private static final Logger LOGGER = LoggerFactory.getLogger(MultiGenerator.class);
+	private static final SecureRandom RANDOM = new SecureRandom();
 	
 	public void setGeneratortype(GeneratorType generatortype) {
 		Generatortype = generatortype;
@@ -130,8 +134,8 @@ public class MultiGenerator extends Generator {
 				stateCandidate.setTypeGenerator(generator.getType());
 				listGeneratedPP.add(stateCandidate);
 			} catch (Exception e) {
-				e.printStackTrace();
-			} 
+				LOGGER.error("No se pudo crear el generador DistributionEstimationAlgorithm", e);
+			}
 			j++;
 		}
 	}
@@ -284,7 +288,7 @@ public class MultiGenerator extends Generator {
 			limitRoulette.setGenerator(listGenerators[i]);
 			listLimit.add(limitRoulette);
 		}
-		float numbAleatory = (float) (Math.random() * (double)(1));
+		float numbAleatory = (float) (RANDOM.nextFloat() * (double)(1));
 		boolean find = false;
 		int i = 0;
 		while ((find == false) && (i < listLimit.size())){

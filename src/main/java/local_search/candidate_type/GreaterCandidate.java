@@ -6,6 +6,7 @@ package local_search.candidate_type;
 
 
 import java.lang.reflect.InvocationTargetException;
+import java.security.SecureRandom;
 import java.util.List;
 
 import problem.definition.State;
@@ -14,6 +15,7 @@ import problem.definition.State;
 
 
 public class GreaterCandidate extends SearchCandidate {
+	private static final SecureRandom RANDOM = new SecureRandom();
 	
 	@Override
 	public State stateSearch(List<State> listNeighborhood) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
@@ -30,7 +32,7 @@ public class GreaterCandidate extends SearchCandidate {
 				counter = 0;
 			}
 			if(stateGreater == null){
-				int pos = (int)(Math.random() * (double)(listNeighborhood.size() - 1));
+				int pos = (int)(RANDOM.nextInt() * (double)(listNeighborhood.size() - 1));
 				stateGreater = listNeighborhood.get(pos);
 			}
 		}
