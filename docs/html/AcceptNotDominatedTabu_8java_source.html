@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BiCIAM: Archivo de código fuente local_search/acceptation_type/AcceptNotDominatedTabu.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BiCIAM<span id="projectnumber">&#160;1.0-SNAPSHOT</span>
+   </div>
+   <div id="projectbrief">Metaheurísticas y algoritmos evolutivos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('AcceptNotDominatedTabu_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AcceptNotDominatedTabu.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="AcceptNotDominatedTabu_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>local_search.acceptation_type;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> metaheurictics.strategy.Strategy;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> problem.definition.State;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu.html">    9</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu.html">AcceptNotDominatedTabu</a> <span class="keyword">extends</span> <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html">AcceptableCandidate</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    @Override</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu.html#a3182ac113bddb89bb3ea7af704b38835">   12</a></span>    <span class="keyword">public</span> Boolean <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu.html#a3182ac113bddb89bb3ea7af704b38835">acceptCandidate</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCurrent, <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCandidate) {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        List&lt;State&gt; list = <a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a>.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#a62c18bdd14cf506330124cf3d6fa618e">getStrategy</a>().<a class="code hl_variable" href="classmetaheurictics_1_1strategy_1_1Strategy.html#aa572e7d90e24bae70ea47a31fee298f4">listRefPoblacFinal</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1Dominance.html">Dominance</a> dominance = <span class="keyword">new</span> <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1Dominance.html">Dominance</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">if</span>(list.size() == 0){</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            list.add(stateCurrent.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a113f6883a1f6bd20eea2da09a0adc5c3">clone</a>());</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="comment">//Verificando si la soluci�n candidata domina a alguna de las soluciones de la lista de soluciones no dominadas</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="comment">//De ser as� se eliminan de la lista y se adiciona la nueva soluci�n en la lista</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="comment">//De lo contrario no se adiciona la soluci�n candidata a la lista</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">//Si fue insertada en la lista entonces la solucion candidata se convierte en solucion actual</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        dominance.<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1Dominance.html#aff9166b5654b3ed44eed2cee4de7d2b2">ListDominance</a>(stateCandidate, list);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+</div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_html"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu.html">local_search.acceptation_type.AcceptNotDominatedTabu</a></div><div class="ttdef"><b>Definición</b> <a href="#l00009">AcceptNotDominatedTabu.java:9</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_html_a3182ac113bddb89bb3ea7af704b38835"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu.html#a3182ac113bddb89bb3ea7af704b38835">local_search.acceptation_type.AcceptNotDominatedTabu.acceptCandidate</a></div><div class="ttdeci">Boolean acceptCandidate(State stateCurrent, State stateCandidate)</div><div class="ttdef"><b>Definición</b> <a href="#l00012">AcceptNotDominatedTabu.java:12</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptableCandidate_html"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html">local_search.acceptation_type.AcceptableCandidate</a></div><div class="ttdef"><b>Definición</b> <a href="AcceptableCandidate_8java_source.html#l00007">AcceptableCandidate.java:7</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1Dominance_html"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1Dominance.html">local_search.acceptation_type.Dominance</a></div><div class="ttdef"><b>Definición</b> <a href="Dominance_8java_source.html#l00011">Dominance.java:11</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1Dominance_html_aff9166b5654b3ed44eed2cee4de7d2b2"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1Dominance.html#aff9166b5654b3ed44eed2cee4de7d2b2">local_search.acceptation_type.Dominance.ListDominance</a></div><div class="ttdeci">boolean ListDominance(State solutionX, List&lt; State &gt; list)</div><div class="ttdef"><b>Definición</b> <a href="Dominance_8java_source.html#l00016">Dominance.java:16</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html">metaheurictics.strategy.Strategy</a></div><div class="ttdef"><b>Definición</b> <a href="Strategy_8java_source.html#l00028">Strategy.java:28</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_a62c18bdd14cf506330124cf3d6fa618e"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#a62c18bdd14cf506330124cf3d6fa618e">metaheurictics.strategy.Strategy.getStrategy</a></div><div class="ttdeci">static synchronized Strategy getStrategy()</div><div class="ttdef"><b>Definición</b> <a href="Strategy_8java_source.html#l00069">Strategy.java:69</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_aa572e7d90e24bae70ea47a31fee298f4"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#aa572e7d90e24bae70ea47a31fee298f4">metaheurictics.strategy.Strategy.listRefPoblacFinal</a></div><div class="ttdeci">List&lt; State &gt; listRefPoblacFinal</div><div class="ttdef"><b>Definición</b> <a href="Strategy_8java_source.html#l00044">Strategy.java:44</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html">problem.definition.State</a></div><div class="ttdef"><b>Definición</b> <a href="State_8java_source.html#l00009">State.java:9</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html_a113f6883a1f6bd20eea2da09a0adc5c3"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html#a113f6883a1f6bd20eea2da09a0adc5c3">problem.definition.State.clone</a></div><div class="ttdeci">State clone()</div><div class="ttdef"><b>Definición</b> <a href="State_8java_source.html#l00062">State.java:62</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_69f8b01ee149ffc7c200957d00fb50ed.html">local_search</a></li><li class="navelem"><a href="dir_7e4a0c289dd0f73483cade40f7dfb06d.html">acceptation_type</a></li><li class="navelem"><a href="AcceptNotDominatedTabu_8java.html">AcceptNotDominatedTabu.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

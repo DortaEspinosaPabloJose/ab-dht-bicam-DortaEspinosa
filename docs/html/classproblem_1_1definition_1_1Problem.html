@@ -1,0 +1,798 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BiCIAM: Referencia de la clase problem.definition.Problem</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BiCIAM<span id="projectnumber">&#160;1.0-SNAPSHOT</span>
+   </div>
+   <div id="projectbrief">Metaheurísticas y algoritmos evolutivos</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classproblem_1_1definition_1_1Problem.html','','classproblem_1_1definition_1_1Problem-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase problem.definition.Problem</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:ProblemType" id="r_ProblemType"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a88bf7becf2c7c7beef8a24afe1397d6a" id="r_a88bf7becf2c7c7beef8a24afe1397d6a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a88bf7becf2c7c7beef8a24afe1397d6a">Problem</a> ()</td></tr>
+<tr class="memitem:a1427b83a226c7a174deee23925af14e4" id="r_a1427b83a226c7a174deee23925af14e4"><td class="memItemLeft">ArrayList&lt; <a class="el" href="classproblem_1_1definition_1_1ObjetiveFunction.html">ObjetiveFunction</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1427b83a226c7a174deee23925af14e4">getFunction</a> ()</td></tr>
+<tr class="memitem:af7a73fa0767acd800875f32e97386d21" id="r_af7a73fa0767acd800875f32e97386d21"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af7a73fa0767acd800875f32e97386d21">setFunction</a> (ArrayList&lt; <a class="el" href="classproblem_1_1definition_1_1ObjetiveFunction.html">ObjetiveFunction</a> &gt; function)</td></tr>
+<tr class="memitem:ad685c1f6c1edba96aa5082d1fdf8bb35" id="r_ad685c1f6c1edba96aa5082d1fdf8bb35"><td class="memItemLeft"><a class="el" href="classproblem_1_1definition_1_1State.html">State</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad685c1f6c1edba96aa5082d1fdf8bb35">getState</a> ()</td></tr>
+<tr class="memitem:afa1cbf017b0c64122fb2db7e4e7df2a2" id="r_afa1cbf017b0c64122fb2db7e4e7df2a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afa1cbf017b0c64122fb2db7e4e7df2a2">setState</a> (<a class="el" href="classproblem_1_1definition_1_1State.html">State</a> state)</td></tr>
+<tr class="memitem:ad6f38df755179e22ffe487ba4a5c8021" id="r_ad6f38df755179e22ffe487ba4a5c8021"><td class="memItemLeft"><a class="el" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad6f38df755179e22ffe487ba4a5c8021">getTypeProblem</a> ()</td></tr>
+<tr class="memitem:a8c0af80ee55954ced5ad7a7e81c84c6a" id="r_a8c0af80ee55954ced5ad7a7e81c84c6a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8c0af80ee55954ced5ad7a7e81c84c6a">setTypeProblem</a> (<a class="el" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a> typeProblem)</td></tr>
+<tr class="memitem:a7da2aa6b2a6f00f6f3993e6fdc43e34b" id="r_a7da2aa6b2a6f00f6f3993e6fdc43e34b"><td class="memItemLeft"><a class="el" href="classproblem_1_1definition_1_1Codification.html">Codification</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7da2aa6b2a6f00f6f3993e6fdc43e34b">getCodification</a> ()</td></tr>
+<tr class="memitem:a33a672579a66c2add5476e0fe446b4eb" id="r_a33a672579a66c2add5476e0fe446b4eb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a33a672579a66c2add5476e0fe446b4eb">setCodification</a> (<a class="el" href="classproblem_1_1definition_1_1Codification.html">Codification</a> codification)</td></tr>
+<tr class="memitem:a4cd649edb8862f21af171491cb9b9386" id="r_a4cd649edb8862f21af171491cb9b9386"><td class="memItemLeft"><a class="el" href="classproblem_1_1definition_1_1Operator.html">Operator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4cd649edb8862f21af171491cb9b9386">getOperator</a> ()</td></tr>
+<tr class="memitem:a2b4cde1a61f7587d1e90d3c6d0b804fe" id="r_a2b4cde1a61f7587d1e90d3c6d0b804fe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2b4cde1a61f7587d1e90d3c6d0b804fe">setOperator</a> (<a class="el" href="classproblem_1_1definition_1_1Operator.html">Operator</a> operator)</td></tr>
+<tr class="memitem:a9a98e419b1fbf5368f68c3894ef733c6" id="r_a9a98e419b1fbf5368f68c3894ef733c6"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9a98e419b1fbf5368f68c3894ef733c6">getPossibleValue</a> ()</td></tr>
+<tr class="memitem:a110ea946c11ac38487f2f94d7407ee4b" id="r_a110ea946c11ac38487f2f94d7407ee4b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a110ea946c11ac38487f2f94d7407ee4b">setPossibleValue</a> (int possibleValue)</td></tr>
+<tr class="memitem:a74d56127a8524b4a20f6ab831744f164" id="r_a74d56127a8524b4a20f6ab831744f164"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a74d56127a8524b4a20f6ab831744f164">Evaluate</a> (<a class="el" href="classproblem_1_1definition_1_1State.html">State</a> state)  throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </td></tr>
+<tr class="memitem:a6731d9f81ab05739dce8ddb4800e1d80" id="r_a6731d9f81ab05739dce8ddb4800e1d80"><td class="memItemLeft"><a class="el" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6731d9f81ab05739dce8ddb4800e1d80">getTypeSolutionMethod</a> ()</td></tr>
+<tr class="memitem:a31c200ce7f4bb23052bff995ec12d521" id="r_a31c200ce7f4bb23052bff995ec12d521"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a31c200ce7f4bb23052bff995ec12d521">setTypeSolutionMethod</a> (<a class="el" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a> typeSolutionMethod)</td></tr>
+<tr class="memitem:a333591de57cbc861ffe762d93b7616e7" id="r_a333591de57cbc861ffe762d93b7616e7"><td class="memItemLeft"><a class="el" href="interfacefactory__interface_1_1IFFactorySolutionMethod.html">IFFactorySolutionMethod</a>&#160;</td><td class="memItemRight"><a class="el" href="#a333591de57cbc861ffe762d93b7616e7">getFactorySolutionMethod</a> ()</td></tr>
+<tr class="memitem:a33e0dea915fd0bbded79b7be8478dd79" id="r_a33e0dea915fd0bbded79b7be8478dd79"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a33e0dea915fd0bbded79b7be8478dd79">setFactorySolutionMethod</a> (<a class="el" href="interfacefactory__interface_1_1IFFactorySolutionMethod.html">IFFactorySolutionMethod</a> factorySolutionMethod)</td></tr>
+<tr class="memitem:a443db14206d399250f49e78175ca829e" id="r_a443db14206d399250f49e78175ca829e"><td class="memItemLeft"><a class="el" href="classproblem_1_1extension_1_1SolutionMethod.html">SolutionMethod</a>&#160;</td><td class="memItemRight"><a class="el" href="#a443db14206d399250f49e78175ca829e">newSolutionMethod</a> (<a class="el" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a> typeSolutionMethod)  throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a43216e475bc790f615d6c6096f55009d" id="r_a43216e475bc790f615d6c6096f55009d"><td class="memItemLeft">ArrayList&lt; <a class="el" href="classproblem_1_1definition_1_1ObjetiveFunction.html">ObjetiveFunction</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a43216e475bc790f615d6c6096f55009d">function</a></td></tr>
+<tr class="memitem:a9d5bdbaaa3ab7261904ca45852f46249" id="r_a9d5bdbaaa3ab7261904ca45852f46249"><td class="memItemLeft"><a class="el" href="classproblem_1_1definition_1_1State.html">State</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9d5bdbaaa3ab7261904ca45852f46249">state</a></td></tr>
+<tr class="memitem:a3d230269c9b6bccd54fea12149a3c7b8" id="r_a3d230269c9b6bccd54fea12149a3c7b8"><td class="memItemLeft"><a class="el" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3d230269c9b6bccd54fea12149a3c7b8">typeProblem</a></td></tr>
+<tr class="memitem:a0ecc87130634f9aae2610a541347be19" id="r_a0ecc87130634f9aae2610a541347be19"><td class="memItemLeft"><a class="el" href="classproblem_1_1definition_1_1Codification.html">Codification</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0ecc87130634f9aae2610a541347be19">codification</a></td></tr>
+<tr class="memitem:aa8dda2409e952ae76989f705664c20a1" id="r_aa8dda2409e952ae76989f705664c20a1"><td class="memItemLeft"><a class="el" href="classproblem_1_1definition_1_1Operator.html">Operator</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa8dda2409e952ae76989f705664c20a1">operator</a></td></tr>
+<tr class="memitem:acbe93a56dc15db61619b505d17e34127" id="r_acbe93a56dc15db61619b505d17e34127"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acbe93a56dc15db61619b505d17e34127">possibleValue</a></td></tr>
+<tr class="memitem:a331828d9233c7997c58a844b8536e869" id="r_a331828d9233c7997c58a844b8536e869"><td class="memItemLeft"><a class="el" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a>&#160;</td><td class="memItemRight"><a class="el" href="#a331828d9233c7997c58a844b8536e869">typeSolutionMethod</a></td></tr>
+<tr class="memitem:a29bde4c1722b923cb95c7157dd49ee55" id="r_a29bde4c1722b923cb95c7157dd49ee55"><td class="memItemLeft"><a class="el" href="interfacefactory__interface_1_1IFFactorySolutionMethod.html">IFFactorySolutionMethod</a>&#160;</td><td class="memItemRight"><a class="el" href="#a29bde4c1722b923cb95c7157dd49ee55">factorySolutionMethod</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock">
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00013">13</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a88bf7becf2c7c7beef8a24afe1397d6a" name="a88bf7becf2c7c7beef8a24afe1397d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88bf7becf2c7c7beef8a24afe1397d6a">&#9670;&#160;</a></span>Problem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">problem.definition.Problem.Problem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00026">26</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a74d56127a8524b4a20f6ab831744f164" name="a74d56127a8524b4a20f6ab831744f164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d56127a8524b4a20f6ab831744f164">&#9670;&#160;</a></span>Evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void problem.definition.Problem.Evaluate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classproblem_1_1definition_1_1State.html">State</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00076">76</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="classproblem_1_1extension_1_1SolutionMethod.html#ae31d6d6000b9043bdee5e2d79fd2a628">problem.extension.SolutionMethod.evaluationState()</a>, <a class="el" href="Problem_8java_source.html#l00104">newSolutionMethod()</a>, <a class="el" href="State_8java_source.html#l00052">problem.definition.State.setEvaluation()</a>, <a class="el" href="Problem_8java_source.html#l00018">state</a> y <a class="el" href="Problem_8java_source.html#l00023">typeSolutionMethod</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="MultiGenerator_8java_source.html#l00111">metaheuristics.generators.MultiGenerator.createInstanceGeneratorsBPP()</a>, <a class="el" href="Strategy_8java_source.html#l00076">metaheurictics.strategy.Strategy.executeStrategy()</a>, <a class="el" href="HillClimbingRestart_8java_source.html#l00065">metaheuristics.generators.HillClimbingRestart.generate()</a>, <a class="el" href="NotDominatedCandidate_8java_source.html#l00014">local_search.candidate_type.NotDominatedCandidate.stateSearch()</a>, <a class="el" href="MultiobjectiveHillClimbingDistance_8java_source.html#l00057">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference()</a> y <a class="el" href="MultiobjectiveHillClimbingRestart_8java_source.html#l00060">metaheuristics.generators.MultiobjectiveHillClimbingRestart.updateReference()</a>.</p>
+
+</div>
+</div>
+<a id="a7da2aa6b2a6f00f6f3993e6fdc43e34b" name="a7da2aa6b2a6f00f6f3993e6fdc43e34b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da2aa6b2a6f00f6f3993e6fdc43e34b">&#9670;&#160;</a></span>getCodification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classproblem_1_1definition_1_1Codification.html">Codification</a> problem.definition.Problem.getCodification </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00053">53</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00020">codification</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="OnePointCrossover_8java_source.html#l00017">evolutionary_algorithms.complement.OnePointCrossover.crossover()</a>, <a class="el" href="MutationOperator_8java_source.html#l00014">problem_operators.MutationOperator.generatedNewState()</a>, <a class="el" href="AIOMutation_8java_source.html#l00018">evolutionary_algorithms.complement.AIOMutation.mutation()</a>, <a class="el" href="OnePointMutation_8java_source.html#l00014">evolutionary_algorithms.complement.OnePointMutation.mutation()</a>, <a class="el" href="TowPointsMutation_8java_source.html#l00023">evolutionary_algorithms.complement.TowPointsMutation.mutation()</a> y <a class="el" href="ProbabilisticSampling_8java_source.html#l00019">evolutionary_algorithms.complement.ProbabilisticSampling.sampling()</a>.</p>
+
+</div>
+</div>
+<a id="a333591de57cbc861ffe762d93b7616e7" name="a333591de57cbc861ffe762d93b7616e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333591de57cbc861ffe762d93b7616e7">&#9670;&#160;</a></span>getFactorySolutionMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacefactory__interface_1_1IFFactorySolutionMethod.html">IFFactorySolutionMethod</a> problem.definition.Problem.getFactorySolutionMethod </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00096">96</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00024">factorySolutionMethod</a>.</p>
+
+</div>
+</div>
+<a id="a1427b83a226c7a174deee23925af14e4" name="a1427b83a226c7a174deee23925af14e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1427b83a226c7a174deee23925af14e4">&#9670;&#160;</a></span>getFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt; <a class="el" href="classproblem_1_1definition_1_1ObjetiveFunction.html">ObjetiveFunction</a> &gt; problem.definition.Problem.getFunction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00030">30</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="FactoresPonderados_8java_source.html#l00013">problem.extension.FactoresPonderados.evaluationState()</a>, <a class="el" href="MultiObjetivoPuro_8java_source.html#l00014">problem.extension.MultiObjetivoPuro.evaluationState()</a>, <a class="el" href="DistributionEstimationAlgorithm_8java_source.html#l00083">metaheuristics.generators.DistributionEstimationAlgorithm.generate()</a> y <a class="el" href="Strategy_8java_source.html#l00422">metaheurictics.strategy.Strategy.updateRefGenerator()</a>.</p>
+
+</div>
+</div>
+<a id="a4cd649edb8862f21af171491cb9b9386" name="a4cd649edb8862f21af171491cb9b9386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd649edb8862f21af171491cb9b9386">&#9670;&#160;</a></span>getOperator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classproblem_1_1definition_1_1Operator.html">Operator</a> problem.definition.Problem.getOperator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00060">60</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00021">operator</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="HillClimbing_8java_source.html#l00062">metaheuristics.generators.HillClimbing.generate()</a>, <a class="el" href="HillClimbingRestart_8java_source.html#l00065">metaheuristics.generators.HillClimbingRestart.generate()</a>, <a class="el" href="LimitThreshold_8java_source.html#l00075">metaheuristics.generators.LimitThreshold.generate()</a>, <a class="el" href="MultiCaseSimulatedAnnealing_8java_source.html#l00057">metaheuristics.generators.MultiCaseSimulatedAnnealing.generate()</a>, <a class="el" href="MultiobjectiveHillClimbingDistance_8java_source.html#l00049">metaheuristics.generators.MultiobjectiveHillClimbingDistance.generate()</a>, <a class="el" href="MultiobjectiveHillClimbingRestart_8java_source.html#l00052">metaheuristics.generators.MultiobjectiveHillClimbingRestart.generate()</a>, <a class="el" href="MultiobjectiveStochasticHillClimbing_8java_source.html#l00043">metaheuristics.generators.MultiobjectiveStochasticHillClimbing.generate()</a>, <a class="el" href="MultiobjectiveTabuSearch_8java_source.html#l00065">metaheuristics.generators.MultiobjectiveTabuSearch.generate()</a>, <a class="el" href="RandomSearch_8java_source.html#l00055">metaheuristics.generators.RandomSearch.generate()</a>, <a class="el" href="SimulatedAnnealing_8java_source.html#l00072">metaheuristics.generators.SimulatedAnnealing.generate()</a>, <a class="el" href="TabuSearch_8java_source.html#l00077">metaheuristics.generators.TabuSearch.generate()</a>, <a class="el" href="CandidateValue_8java_source.html#l00053">local_search.candidate_type.CandidateValue.stateCandidate()</a>, <a class="el" href="MultiobjectiveHillClimbingDistance_8java_source.html#l00057">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference()</a> y <a class="el" href="MultiobjectiveHillClimbingRestart_8java_source.html#l00060">metaheuristics.generators.MultiobjectiveHillClimbingRestart.updateReference()</a>.</p>
+
+</div>
+</div>
+<a id="a9a98e419b1fbf5368f68c3894ef733c6" name="a9a98e419b1fbf5368f68c3894ef733c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a98e419b1fbf5368f68c3894ef733c6">&#9670;&#160;</a></span>getPossibleValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int problem.definition.Problem.getPossibleValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00068">68</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00022">possibleValue</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="ProbabilisticSampling_8java_source.html#l00019">evolutionary_algorithms.complement.ProbabilisticSampling.sampling()</a>.</p>
+
+</div>
+</div>
+<a id="ad685c1f6c1edba96aa5082d1fdf8bb35" name="ad685c1f6c1edba96aa5082d1fdf8bb35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad685c1f6c1edba96aa5082d1fdf8bb35">&#9670;&#160;</a></span>getState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classproblem_1_1definition_1_1State.html">State</a> problem.definition.Problem.getState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00038">38</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00018">state</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="EvolutionStrategies_8java_source.html#l00066">metaheuristics.generators.EvolutionStrategies.generate()</a>, <a class="el" href="GeneticAlgorithm_8java_source.html#l00078">metaheuristics.generators.GeneticAlgorithm.generate()</a> y <a class="el" href="MultiGenerator_8java_source.html#l00056">metaheuristics.generators.MultiGenerator.initializeGenerators()</a>.</p>
+
+</div>
+</div>
+<a id="ad6f38df755179e22ffe487ba4a5c8021" name="ad6f38df755179e22ffe487ba4a5c8021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f38df755179e22ffe487ba4a5c8021">&#9670;&#160;</a></span>getTypeProblem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a> problem.definition.Problem.getTypeProblem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00046">46</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00019">typeProblem</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="Dominance_8java_source.html#l00097">local_search.acceptation_type.Dominance.dominance()</a>, <a class="el" href="FactoresPonderados_8java_source.html#l00013">problem.extension.FactoresPonderados.evaluationState()</a>, <a class="el" href="MultiObjetivoPuro_8java_source.html#l00014">problem.extension.MultiObjetivoPuro.evaluationState()</a>, <a class="el" href="Strategy_8java_source.html#l00076">metaheurictics.strategy.Strategy.executeStrategy()</a>, <a class="el" href="ParticleSwarmOptimization_8java_source.html#l00217">metaheuristics.generators.ParticleSwarmOptimization.gBestInicial()</a>, <a class="el" href="DistributionEstimationAlgorithm_8java_source.html#l00132">metaheuristics.generators.DistributionEstimationAlgorithm.getReference()</a>, <a class="el" href="EvolutionStrategies_8java_source.html#l00089">metaheuristics.generators.EvolutionStrategies.getReference()</a>, <a class="el" href="GeneticAlgorithm_8java_source.html#l00117">metaheuristics.generators.GeneticAlgorithm.getReference()</a>, <a class="el" href="HillClimbing_8java_source.html#l00043">metaheuristics.generators.HillClimbing.HillClimbing()</a>, <a class="el" href="HillClimbingRestart_8java_source.html#l00042">metaheuristics.generators.HillClimbingRestart.HillClimbingRestart()</a>, <a class="el" href="ParticleSwarmOptimization_8java_source.html#l00068">metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest()</a>, <a class="el" href="SteadyStateReplace_8java_source.html#l00013">evolutionary_algorithms.complement.SteadyStateReplace.replace()</a>, <a class="el" href="MultiGenerator_8java_source.html#l00238">metaheuristics.generators.MultiGenerator.searchState()</a>, <a class="el" href="TruncationSelection_8java_source.html#l00043">evolutionary_algorithms.complement.TruncationSelection.selection()</a>, <a class="el" href="Particle_8java_source.html#l00146">metaheuristics.generators.Particle.updateReference()</a> y <a class="el" href="ParticleSwarmOptimization_8java_source.html#l00185">metaheuristics.generators.ParticleSwarmOptimization.updateReference()</a>.</p>
+
+</div>
+</div>
+<a id="a6731d9f81ab05739dce8ddb4800e1d80" name="a6731d9f81ab05739dce8ddb4800e1d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6731d9f81ab05739dce8ddb4800e1d80">&#9670;&#160;</a></span>getTypeSolutionMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a> problem.definition.Problem.getTypeSolutionMethod </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00090">90</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00023">typeSolutionMethod</a>.</p>
+
+</div>
+</div>
+<a id="a443db14206d399250f49e78175ca829e" name="a443db14206d399250f49e78175ca829e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a443db14206d399250f49e78175ca829e">&#9670;&#160;</a></span>newSolutionMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classproblem_1_1extension_1_1SolutionMethod.html">SolutionMethod</a> problem.definition.Problem.newSolutionMethod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a></td>          <td class="paramname"><span class="paramname"><em>typeSolutionMethod</em></span></td><td>)</td>
+          <td> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00104">104</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="interfacefactory__interface_1_1IFFactorySolutionMethod.html#acefa262efa7711ee87b59ae8780d2bb3">factory_interface.IFFactorySolutionMethod.createdSolutionMethod()</a>, <a class="el" href="Problem_8java_source.html#l00024">factorySolutionMethod</a> y <a class="el" href="Problem_8java_source.html#l00023">typeSolutionMethod</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="Problem_8java_source.html#l00076">Evaluate()</a>.</p>
+
+</div>
+</div>
+<a id="a33a672579a66c2add5476e0fe446b4eb" name="a33a672579a66c2add5476e0fe446b4eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33a672579a66c2add5476e0fe446b4eb">&#9670;&#160;</a></span>setCodification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void problem.definition.Problem.setCodification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classproblem_1_1definition_1_1Codification.html">Codification</a></td>          <td class="paramname"><span class="paramname"><em>codification</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00056">56</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00020">codification</a>.</p>
+
+</div>
+</div>
+<a id="a33e0dea915fd0bbded79b7be8478dd79" name="a33e0dea915fd0bbded79b7be8478dd79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33e0dea915fd0bbded79b7be8478dd79">&#9670;&#160;</a></span>setFactorySolutionMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void problem.definition.Problem.setFactorySolutionMethod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacefactory__interface_1_1IFFactorySolutionMethod.html">IFFactorySolutionMethod</a></td>          <td class="paramname"><span class="paramname"><em>factorySolutionMethod</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00099">99</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00024">factorySolutionMethod</a>.</p>
+
+</div>
+</div>
+<a id="af7a73fa0767acd800875f32e97386d21" name="af7a73fa0767acd800875f32e97386d21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7a73fa0767acd800875f32e97386d21">&#9670;&#160;</a></span>setFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void problem.definition.Problem.setFunction </td>
+          <td>(</td>
+          <td class="paramtype">ArrayList&lt; <a class="el" href="classproblem_1_1definition_1_1ObjetiveFunction.html">ObjetiveFunction</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>function</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00034">34</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+</div>
+</div>
+<a id="a2b4cde1a61f7587d1e90d3c6d0b804fe" name="a2b4cde1a61f7587d1e90d3c6d0b804fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4cde1a61f7587d1e90d3c6d0b804fe">&#9670;&#160;</a></span>setOperator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void problem.definition.Problem.setOperator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classproblem_1_1definition_1_1Operator.html">Operator</a></td>          <td class="paramname"><span class="paramname"><em>operator</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00064">64</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00021">operator</a>.</p>
+
+</div>
+</div>
+<a id="a110ea946c11ac38487f2f94d7407ee4b" name="a110ea946c11ac38487f2f94d7407ee4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110ea946c11ac38487f2f94d7407ee4b">&#9670;&#160;</a></span>setPossibleValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void problem.definition.Problem.setPossibleValue </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>possibleValue</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00072">72</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00022">possibleValue</a>.</p>
+
+</div>
+</div>
+<a id="afa1cbf017b0c64122fb2db7e4e7df2a2" name="afa1cbf017b0c64122fb2db7e4e7df2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1cbf017b0c64122fb2db7e4e7df2a2">&#9670;&#160;</a></span>setState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void problem.definition.Problem.setState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classproblem_1_1definition_1_1State.html">State</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00042">42</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00018">state</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="Strategy_8java_source.html#l00076">metaheurictics.strategy.Strategy.executeStrategy()</a>.</p>
+
+</div>
+</div>
+<a id="a8c0af80ee55954ced5ad7a7e81c84c6a" name="a8c0af80ee55954ced5ad7a7e81c84c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c0af80ee55954ced5ad7a7e81c84c6a">&#9670;&#160;</a></span>setTypeProblem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void problem.definition.Problem.setTypeProblem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a></td>          <td class="paramname"><span class="paramname"><em>typeProblem</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00049">49</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00019">typeProblem</a>.</p>
+
+</div>
+</div>
+<a id="a31c200ce7f4bb23052bff995ec12d521" name="a31c200ce7f4bb23052bff995ec12d521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c200ce7f4bb23052bff995ec12d521">&#9670;&#160;</a></span>setTypeSolutionMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void problem.definition.Problem.setTypeSolutionMethod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a></td>          <td class="paramname"><span class="paramname"><em>typeSolutionMethod</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00093">93</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="Problem_8java_source.html#l00023">typeSolutionMethod</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a0ecc87130634f9aae2610a541347be19" name="a0ecc87130634f9aae2610a541347be19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ecc87130634f9aae2610a541347be19">&#9670;&#160;</a></span>codification</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classproblem_1_1definition_1_1Codification.html">Codification</a> problem.definition.Problem.codification</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00020">20</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="Problem_8java_source.html#l00053">getCodification()</a> y <a class="el" href="Problem_8java_source.html#l00056">setCodification()</a>.</p>
+
+</div>
+</div>
+<a id="a29bde4c1722b923cb95c7157dd49ee55" name="a29bde4c1722b923cb95c7157dd49ee55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29bde4c1722b923cb95c7157dd49ee55">&#9670;&#160;</a></span>factorySolutionMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacefactory__interface_1_1IFFactorySolutionMethod.html">IFFactorySolutionMethod</a> problem.definition.Problem.factorySolutionMethod</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00024">24</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="Problem_8java_source.html#l00096">getFactorySolutionMethod()</a>, <a class="el" href="Problem_8java_source.html#l00104">newSolutionMethod()</a> y <a class="el" href="Problem_8java_source.html#l00099">setFactorySolutionMethod()</a>.</p>
+
+</div>
+</div>
+<a id="a43216e475bc790f615d6c6096f55009d" name="a43216e475bc790f615d6c6096f55009d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43216e475bc790f615d6c6096f55009d">&#9670;&#160;</a></span>function</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;<a class="el" href="classproblem_1_1definition_1_1ObjetiveFunction.html">ObjetiveFunction</a>&gt; problem.definition.Problem.function</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00017">17</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+</div>
+</div>
+<a id="aa8dda2409e952ae76989f705664c20a1" name="aa8dda2409e952ae76989f705664c20a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8dda2409e952ae76989f705664c20a1">&#9670;&#160;</a></span>operator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classproblem_1_1definition_1_1Operator.html">Operator</a> problem.definition.Problem.operator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00021">21</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="Problem_8java_source.html#l00060">getOperator()</a> y <a class="el" href="Problem_8java_source.html#l00064">setOperator()</a>.</p>
+
+</div>
+</div>
+<a id="acbe93a56dc15db61619b505d17e34127" name="acbe93a56dc15db61619b505d17e34127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe93a56dc15db61619b505d17e34127">&#9670;&#160;</a></span>possibleValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int problem.definition.Problem.possibleValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00022">22</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="Problem_8java_source.html#l00068">getPossibleValue()</a> y <a class="el" href="Problem_8java_source.html#l00072">setPossibleValue()</a>.</p>
+
+</div>
+</div>
+<a id="a9d5bdbaaa3ab7261904ca45852f46249" name="a9d5bdbaaa3ab7261904ca45852f46249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d5bdbaaa3ab7261904ca45852f46249">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classproblem_1_1definition_1_1State.html">State</a> problem.definition.Problem.state</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00018">18</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="Problem_8java_source.html#l00076">Evaluate()</a>, <a class="el" href="Problem_8java_source.html#l00038">getState()</a> y <a class="el" href="Problem_8java_source.html#l00042">setState()</a>.</p>
+
+</div>
+</div>
+<a id="a3d230269c9b6bccd54fea12149a3c7b8" name="a3d230269c9b6bccd54fea12149a3c7b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d230269c9b6bccd54fea12149a3c7b8">&#9670;&#160;</a></span>typeProblem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a> problem.definition.Problem.typeProblem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00019">19</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="Problem_8java_source.html#l00046">getTypeProblem()</a> y <a class="el" href="Problem_8java_source.html#l00049">setTypeProblem()</a>.</p>
+
+</div>
+</div>
+<a id="a331828d9233c7997c58a844b8536e869" name="a331828d9233c7997c58a844b8536e869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331828d9233c7997c58a844b8536e869">&#9670;&#160;</a></span>typeSolutionMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a> problem.definition.Problem.typeSolutionMethod</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="Problem_8java_source.html#l00023">23</a> del archivo <a class="el" href="Problem_8java_source.html">Problem.java</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="Problem_8java_source.html#l00076">Evaluate()</a>, <a class="el" href="Problem_8java_source.html#l00090">getTypeSolutionMethod()</a>, <a class="el" href="Problem_8java_source.html#l00104">newSolutionMethod()</a> y <a class="el" href="Problem_8java_source.html#l00093">setTypeSolutionMethod()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>problem/definition/<a class="el" href="Problem_8java_source.html">Problem.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>problem</b></li><li class="navelem"><a href="namespaceproblem_1_1definition.html">definition</a></li><li class="navelem"><a href="classproblem_1_1definition_1_1Problem.html">Problem</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
