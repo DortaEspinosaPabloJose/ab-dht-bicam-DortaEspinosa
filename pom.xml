@@ -16,6 +16,9 @@
         <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+        <!-- Clase con main(): AJUSTAR a la real de BiCIAM -->
+        <app.main.class>com.biciam.Main</app.main.class>
+
         <!-- Dependencias -->
         <junit.version>5.10.2</junit.version>
         <slf4j.version>2.0.13</slf4j.version>
@@ -32,8 +35,8 @@
 
         <!-- SonarCloud (sustituir ORGANIZACION y PROYECTO por los reales) -->
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.organization>dortaespinosapablojose</sonar.organization>
-        <sonar.projectKey>DortaEspinosaPabloJose_ab-dht-bicam-DortaEspinosa</sonar.projectKey>
+        <sonar.organization>ORGANIZACION</sonar.organization>
+        <sonar.projectKey>PROYECTO</sonar.projectKey>
         <sonar.sources>src/main/java</sonar.sources>
         <sonar.tests>src/test/java</sonar.tests>
         <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
@@ -93,15 +96,51 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.4.1</version>
-                <!-- Descomentar y ajustar cuando se conozca la clase principal
                 <configuration>
-                  <archive>
-                    <manifest>
-                      <mainClass>com.biciam.Main</mainClass>
-                    </manifest>
-                  </archive>
+                    <archive>
+                        <manifest>
+                            <mainClass>app.Main</mainClass>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                        </manifest>
+                    </archive>
                 </configuration>
-                -->
+            </plugin>
+
+            <!-- Copia las dependencias de ejecución a target/lib (usado por el Dockerfile) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.7.1</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <includeScope>runtime</includeScope>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.7.1</version>
+                <executions>
+                    <execution>
+                        <id>copy-libs</id>
+                        <phase>package</phase>
+                        <goals><goal>copy-dependencies</goal></goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <includeScope>runtime</includeScope>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
 
             <!-- ============================================================
@@ -160,7 +199,7 @@
                 <version>${pmd.plugin.version}</version>
                 <configuration>
                     <printFailingErrors>true</printFailingErrors>
-                    <failOnViolation>false</failOnViolation>
+                    <failOnViolation>true</failOnViolation>
                     <failurePriority>2</failurePriority>
                     <rulesets>
                         <ruleset>/category/java/bestpractices.xml</ruleset>
@@ -201,7 +240,7 @@
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>
                     <!-- Solo falla el build con errores; los avisos (warning) se reportan -->
                     <violationSeverity>error</violationSeverity>
-                    <failOnViolation>false</failOnViolation>
+                    <failOnViolation>true</failOnViolation>
                 </configuration>
                 <executions>
                     <execution>
