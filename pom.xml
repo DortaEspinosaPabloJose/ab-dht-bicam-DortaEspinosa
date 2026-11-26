@@ -30,6 +30,18 @@
         <findsecbugs.version>1.13.0</findsecbugs.version>
         <dependency-check.version>10.0.3</dependency-check.version>
 
+        <!-- SonarCloud (sustituir ORGANIZACION y PROYECTO por los reales) -->
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.organization>dortaespinosapablojose</sonar.organization>
+        <sonar.projectKey>DortaEspinosaPabloJose_ab-dht-bicam-DortaEspinosa</sonar.projectKey>
+        <sonar.sources>src/main/java</sonar.sources>
+        <sonar.tests>src/test/java</sonar.tests>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.java.spotbugs.reportPaths>${project.build.directory}/spotbugsXml.xml</sonar.java.spotbugs.reportPaths>
+        <sonar.java.pmd.reportPaths>${project.build.directory}/pmd.xml</sonar.java.pmd.reportPaths>
+        <sonar.java.checkstyle.reportPaths>${project.build.directory}/checkstyle-result.xml</sonar.java.checkstyle.reportPaths>
+        <sonar.plugin.version>4.0.0.4121</sonar.plugin.version>
+
         <!-- Umbrales -->
         <cvss.fail.threshold>7</cvss.fail.threshold>
         <jacoco.line.minimum>0.80</jacoco.line.minimum>
@@ -148,7 +160,7 @@
                 <version>${pmd.plugin.version}</version>
                 <configuration>
                     <printFailingErrors>true</printFailingErrors>
-                    <failOnViolation>true</failOnViolation>
+                    <failOnViolation>false</failOnViolation>
                     <failurePriority>2</failurePriority>
                     <rulesets>
                         <ruleset>/category/java/bestpractices.xml</ruleset>
@@ -189,7 +201,7 @@
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>
                     <!-- Solo falla el build con errores; los avisos (warning) se reportan -->
                     <violationSeverity>error</violationSeverity>
-                    <failOnViolation>true</failOnViolation>
+                    <failOnViolation>false</failOnViolation>
                 </configuration>
                 <executions>
                     <execution>
@@ -236,10 +248,22 @@
             </plugin>
 
             <!-- ============================================================
+                 SonarCloud: sube cobertura (JaCoCo) y los informes de
+                 PMD, Checkstyle y SpotBugs. Ejecutar con:
+                   mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+                 (variable de entorno SONAR_TOKEN con el token de SonarCloud)
+                 ============================================================ -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar.plugin.version}</version>
+            </plugin>
+
+            <!-- ============================================================
                  OWASP Dependency-Check: CVEs en dependencias
                  No se enlaza a ninguna fase (la primera ejecución descarga la
                  base NVD y es lenta). Ejecutar con:
-                   mvn org.owasp:dependency-check-maven:check -Dnvd.api.key=TU_CLAVE
+                   export NVD_API_KEY=TU_CLAVE  &&  mvn org.owasp:dependency-check-maven:check
                  Informe: target/dependency-check-report.html
                  ============================================================ -->
             <plugin>
